@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Cards</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script type="module" src="ListeTypesPokemon.js"></script> <!-- Inclure d'abord ListeTypesPokemon.js -->
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div id="app" class="center">
+    <div class="input-container">
+      <label for="pokemonCount">Nombre de Pokémon :</label>
+      <input type="number" id="pokemonCount" v-model="desiredPokemonCount" />
+      <button @click="fetchPokemonData">Charger les Pokémon</button>
+    </div>
+    
+    <div class="generation-container">
+      <label for="generationSelect">Génération :</label>
+      <select id="generationSelect" v-model="selectedGeneration">
+        <option value="0">Toutes les générations</option>
+        <option v-for="gen in generations" :key="gen.value" :value="gen.value">{{ gen.label }}</option>
+      </select>
+    </div>
+    
+    <!-- Incluez toujours le composant ListeTypesPokemon -->
+    <liste-types-pokemon :pokemon-list="pokemonList"></liste-types-pokemon>
+  
+    <pokedex :pokemon-list="filteredPokemonList"></pokedex>
+  </div>
+  
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

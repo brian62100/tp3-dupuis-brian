@@ -1,0 +1,54 @@
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start; /* Aligner les éléments à gauche */
+}
+  
+.pokemon-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center; 
+}
+
+.generation-container {
+  margin-top: 16px; /* Espacement entre le pokedex et la boîte de sélection de génération */
+}
+
+  
+.input-container {
+  margin-bottom: 16px; /* Espacement entre le champ de saisie et le pokedex */
+}
+
+/*met automatiquement les couleur de fond pour les type déjà fait*/
+.plante-type {
+  background-color: #78C850;
+}
+  
+.feu-type {
+  background-color: #F08030;
+}
+  
+.eau-type {
+  background-color: #6890F0;
+}
+
+.poison-type {
+  background-color: hsl(307, 62%, 54%);
+}
+
+.vol-type {
+  background-color: rgb(206, 211, 223);
+}
+
+.insecte-type {
+  background-color: hsl(113, 76%, 37%); 
+}
+
+.normal-type {
+  background-color: hsl(0, 0%, 38%);
+}
+  
